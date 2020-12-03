@@ -15,12 +15,13 @@ $anio = $_POST['anio'];
 $fecha = $_POST['fecha'];
 $renovo = $_POST['renovo'];
 $rec = $_POST['rec'];
+$cat = $_POST['cat'];
 
 $target_path = "images/".basename($_FILES["foto"]['name']);
 
 if (move_uploaded_file($_FILES["foto"]['tmp_name'], $target_path)) {
 
-    $sql = "INSERT INTO `filiacion`(`titular`, `nacionalidad`, `fechadenacimiento`, `domicilio`, `licencia`, `gruposanguinio`, `rh`, `disp`,`expediente`,`letra`,`anio`,`fecha`,`renovo`,`rec`,`foto`) 
+    $sql = "INSERT INTO `filiacion`(`titular`, `nacionalidad`, `fechadenacimiento`, `domicilio`, `licencia`, `gruposanguinio`, `rh`, `disp`,`expediente`,`letra`,`anio`,`fecha`,`renovo`,`rec`,`foto`,`cat`) 
         VALUES 
         (:titular,
         :nacionalidad,
@@ -36,7 +37,8 @@ if (move_uploaded_file($_FILES["foto"]['tmp_name'], $target_path)) {
         :fecha,
         :renovo,
         :rec,
-        :foto)";
+        :foto,
+        :cat)";
 
     $insert = $conn->prepare($sql);
     $insert->bindParam(":titular", $titular);
@@ -54,6 +56,7 @@ if (move_uploaded_file($_FILES["foto"]['tmp_name'], $target_path)) {
     $insert->bindParam(":renovo", $renovo);
     $insert->bindParam(":rec", $rec);
     $insert->bindParam(":foto", $target_path);
+    $insert->bindParam(":cat", $cat);
 
     if ($insert->execute()) {
         echo "perfecto";

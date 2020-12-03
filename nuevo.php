@@ -21,17 +21,21 @@
         </div>
       </div>
       <div class="form-row">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-3 mb-3">
           <label for="domicilio">Foto</label>
           <input type="file" class="form-control" name="foto" id="foto" aria-describedby="foto">
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-3 mb-3">
           <label for="domicilio">Domicilio</label>
           <input type="text" class="form-control" name="domicilio" id="domicilio" aria-describedby="domicilio">
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-3 mb-3">
           <label for="licencia">Licencia N°</label>
           <input type="number" class="form-control" name="licencia" id="licencia" aria-describedby="licencia">
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="CAT">CAT.</label>
+          <input type="text" class="form-control" name="cat" id="cat" aria-describedby="cat">
         </div>
       </div>
 
