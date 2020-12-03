@@ -25,7 +25,7 @@
       </li>
     </ul>
     <form method="post" action="buscar.php" class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" name="buscar" type="buscar" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" name="buscar" type="buscar" placeholder="Buscar" aria-label="Buscar">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </div>

@@ -1,7 +1,6 @@
 <?php
 require "conexion.php";
 
-
 $titular = $_POST['titular'];
 $nacionalidad = $_POST['nacionalidad'];
 $fechadenacimiento = $_POST['fechadenacimiento'];

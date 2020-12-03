@@ -5,16 +5,30 @@ require "header.php";
 <body>
         <?php
         require "conexion.php";
-        $sqlMaxCodigo = "SELECT * FROM filiacion";
+        $sqlMaxCodigo = "SELECT * FROM filiacion ORDER BY id DESC LIMIT 10 ";
         $res = $conn->prepare($sqlMaxCodigo);
         $res->execute();
         ?>
         <div class="container">
 
                 <?php while ($re = $res->fetch(PDO::FETCH_ASSOC)) : ?>
-                        <ul class="list-group" style="margin-top: 10px;">
-                                <li class="list-group-item"> <?php echo $re['titular']; ?></li>
-                        </ul>
+
+                        <div class="card mb-3" style="max-width: 540px;margin-top: 10px;">
+                                <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                                <img src="<?php echo $re['foto']; ?>" class="card-img" alt="foto">
+                                        </div>
+                                        <div class="col-md-8">
+                                                <div class="card-body">
+                                                        <h5 class="card-title"><?php echo $re['titular']; ?></h5>
+                                                        <a href="ver.php?id=<?php echo $re['id']; ?>" class="btn btn-primary">Ver</a>
+                                                        <p class="card-text"></p>
+                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+
                 <?php endwhile; ?>
 
         </div>
