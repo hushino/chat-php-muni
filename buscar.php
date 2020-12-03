@@ -5,7 +5,7 @@
 require "header.php";
 require "conexion.php";
 $id = $_POST['buscar'];
-$sqlMaxCodigo = "SELECT * FROM filiacion WHERE id=$id";
+$sqlMaxCodigo = "SELECT * FROM filiacion WHERE titular LIKE '%" . $id . "%' OR licencia LIKE '%" . $id . "%'";
 $res = $conn->prepare($sqlMaxCodigo);
 $res->execute();
 ?>
