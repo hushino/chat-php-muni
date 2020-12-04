@@ -5,6 +5,10 @@ $id = $_GET["id"];
 $sqlMaxCodigo = "SELECT * FROM filiacion WHERE id=$id";
 $res = $conn->prepare($sqlMaxCodigo);
 $res->execute();
+
+$asoc = "SELECT * FROM renovacion WHERE titularid=$id";
+$res2 = $conn->prepare($asoc);
+$res2->execute();
 ?>
 
 <body>
@@ -19,6 +23,23 @@ $res->execute();
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $re['titular']; ?></h5>
                             <a href="imprimir.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Imprimir</a>
+                            <a href="agregarDatos.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Agregar datos</a>
+                            <?php while ($ree = $res2->fetch(PDO::FETCH_ASSOC)) : ?>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Renovo Año</th>
+                                            <th scope="col">Rec. N°</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><?php echo $ree['renovo']; ?></td>
+                                            <td><?php echo $ree['rec']; ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            <?php endwhile; ?>
                         </div>
                     </div>
                 </div>

@@ -79,18 +79,7 @@
         </div>
 
       </div>
-      <div class="form-row">
-        <div class="col-md-4 mb-4">
-          <label for="renovo">Renovo año</label>
-          <input type="date" class="form-control" name="renovo" id="renovo" aria-describedby="renovo">
-        </div>
-
-
-        <div class="col-md-4 mb-4">
-          <label for="rec">Rec N°</label>
-          <input type="number" class="form-control" name="rec" id="rec" aria-describedby="rec">
-        </div>
-      </div>
+   
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 

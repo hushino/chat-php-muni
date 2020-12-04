@@ -21,9 +21,10 @@ require "header.php";
                                         <div class="col-md-8">
                                                 <div class="card-body">
                                                         <h5 class="card-title"><?php echo $re['titular']; ?></h5>
-                                                        <a href="ver.php?id=<?php echo $re['id']; ?>" class="btn btn-primary">Ver</a>
-                                                        <p class="card-text"></p>
+                                                        <p class="card-text">Nacionalidad: <?php echo $re['nacionalidad']; ?></p>
                                                         <p class="card-text"><small class="text-muted"></small></p>
+                                                        <a href="ver.php?id=<?php echo $re['id']; ?>" class="btn btn-primary">Ver</a>
+
                                                 </div>
                                         </div>
                                 </div>

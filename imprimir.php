@@ -27,7 +27,6 @@ $res->execute(); ?>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $re['titular']; ?></h5>
-                            <a href="imprimir.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Imprimir</a>
                         </div>
                     </div>
                 </div>
