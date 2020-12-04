@@ -13,7 +13,7 @@ require "header.php";
 
                 <?php while ($re = $res->fetch(PDO::FETCH_ASSOC)) : ?>
 
-                        <div class="card mb-3" style="max-width: 540px;margin-top: 10px;">
+                        <div class="card mb-3" style="max-width: 540px;margin-top: 30px;">
                                 <div class="row no-gutters">
                                         <div class="col-md-4">
                                                 <img src="<?php echo $re['foto']; ?>" class="card-img" alt="foto">

@@ -1,11 +1,20 @@
 <?php
-require "header.php";
 require "conexion.php";
 $id = $_GET["id"];
 $sqlMaxCodigo = "SELECT * FROM filiacion WHERE id=$id";
 $res = $conn->prepare($sqlMaxCodigo);
-$res->execute();
-?>
+$res->execute(); ?>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <script src="public/js/jquery-3.5.1.min.js"></script>
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+</head>
 
 <body>
     <div class="container">
@@ -27,5 +36,8 @@ $res->execute();
     </div>
 
 </body>
+<script>
+    window.print();
+</script>
 
 </html>
