@@ -24,22 +24,26 @@ $res2->execute();
                             <h5 class="card-title"><?php echo $re['titular']; ?></h5>
                             <a href="imprimir.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Imprimir</a>
                             <a href="agregarDatos.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Agregar datos</a>
-                            <?php while ($ree = $res2->fetch(PDO::FETCH_ASSOC)) : ?>
-                                <table class="table">
-                                    <thead>
+                            <table class="table" style="margin-top: 10px;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Renovo Año</th>
+                                        <th scope="col">Rec. N°</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php while ($ree = $res2->fetch(PDO::FETCH_ASSOC)) : ?>
+
                                         <tr>
-                                            <th scope="col">Renovo Año</th>
-                                            <th scope="col">Rec. N°</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
+
                                             <td><?php echo $ree['renovo']; ?></td>
                                             <td><?php echo $ree['rec']; ?></td>
+
                                         </tr>
-                                    </tbody>
-                                </table>
-                            <?php endwhile; ?>
+                                    <?php endwhile; ?>
+                                </tbody>
+
+                            </table>
                         </div>
                     </div>
                 </div>

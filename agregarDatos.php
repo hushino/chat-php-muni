@@ -16,7 +16,7 @@ $res->execute();
                 <div class="form-row">
                     <div class="col-md-4 mb-4">
                         <label for="titular">Renovo Año</label>
-                        <input type="number" class="form-control" name="renovo" id="renovo" aria-describedby="renovo">
+                        <input type="date" class="form-control" name="renovo" id="renovo" aria-describedby="renovo">
                     </div>
 
                     <div class="col-md-4 mb-4">
