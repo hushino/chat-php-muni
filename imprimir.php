@@ -24,7 +24,7 @@ $res2->execute();
 <body>
     <div class="container">
         <?php while ($re = $res->fetch(PDO::FETCH_ASSOC)) : ?>
-            <h1>Municipalidad de clorinda - Filiación del conductor</h1>
+            <h1 style="text-align: center;">Municipalidad de clorinda - Filiación del conductor</h1>
             <h3 style="text-align: center;">Direccion de Tránsito</h3>
             <!-- <div class="card mb-3" style="max-width: 540px;margin-top: 30px;">
                 <div class="row no-gutters">
@@ -69,7 +69,7 @@ $res2->execute();
                     <div class="row" style="margin-left: 10px;">
                         <div class="col-sm">
                             <h5 class="mt-0">Licencia N°: <?php echo $re['licencia']; ?></h5>
-                            <h5 class="mt-0">Grupo sanguinio: <?php echo $re['gruposanguinio']; ?></h5>
+                            <h5 class="mt-0">Grupo sanguineo: <?php echo $re['gruposanguinio']; ?></h5>
                         </div>
                         <div class="col-sm">
                             <h5 class="mt-0">RH: <?php echo $re['rh']; ?></h5>
@@ -115,7 +115,7 @@ $res2->execute();
 
 </body>
 <script>
-     window.print();
+    window.print();
 </script>
 
 </html>
