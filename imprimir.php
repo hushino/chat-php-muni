@@ -81,7 +81,7 @@ $res2->execute();
                             <h5 class="mt-0">Expediente N°: <?php echo $re['expediente']; ?></h5>
                             <h5 class="mt-0">Letra: <?php echo $re['letra']; ?></h5>
                         </div>
-                        <div class="col-sm" style="margin-left: 10px;">
+                        <div class="col-sm" style="margin-left: 5px;">
                             <h5 class="mt-0">Año: <?php echo $re['anio']; ?></h5>
                             <h5 class="mt-0">Fecha: <?php echo $re['fecha']; ?></h5>
                             <h5 class="mt-0">Cat: <?php echo $re['cat']; ?></h5>
