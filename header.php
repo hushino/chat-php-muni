@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['datosUser'])) {
+  header("location:Login/index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
