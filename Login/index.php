@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['datosUser']['nombreUser'])){
-    header("location: ./../header.php");
+if (isset($_SESSION['datosUser']['nombreUser'])) {
+  header("location: ./../header.php");
 }
 ?>
 <!DOCTYPE html>
@@ -41,19 +41,19 @@ if(isset($_SESSION['datosUser']['nombreUser'])){
             Carnet de filiacion
           </span>
 
-          <div class="wrap-input100 validate-input" data-validate="Ingrese nombre de usuario">
-            <input class="input100" type="text" id="nombre" name="nombre" placeholder="Username">
+          <div class="wrap-input100 validate-input" data-validate="nombre">
+            <input class="input100" type="text" id="nombre" name="nombre" placeholder="Ingrese nombre de usuario">
             <span class="focus-input100" data-placeholder="&#xf207;"></span>
           </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Ingrese contraseña">
-            <input class="input100" type="password" id="password" name="password" placeholder="Password">
+          <div class="wrap-input100 validate-input" data-validate="password">
+            <input class="input100" type="password" id="password" name="password" placeholder="Ingrese contraseña">
             <span class="focus-input100" data-placeholder="&#xf191;"></span>
           </div>
 
           <div class="container-login100-form-btn">
             <button type="submit" class="login100-form-btn">
-              Login
+              Ingresar
             </button>
           </div>
 
@@ -79,21 +79,21 @@ if(isset($_SESSION['datosUser']['nombreUser'])){
   <!--===============================================================================================-->
   <script src="js/main.js"></script>
   <style>
-  .container-login100::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0);
-  }
+    .container-login100::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0);
+    }
 
-  .wrap-login100 {
-    background: #9252f87a;
-  }
+    .wrap-login100 {
+      background: #9252f87a;
+    }
   </style>
 </body>
 

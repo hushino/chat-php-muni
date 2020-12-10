@@ -20,7 +20,7 @@ if($buscarUser2!=null){
 if ($usuario!=$buscarUser2['nombreUser']){
     $error="usuario incorrecto ";
 echo '<script>alert("'.$error.'")</script>';
-echo '<script>location.href = "../../inicio.php"</script>';
+echo '<script>location.href = "../../index.php"</script>';
 }
 
 

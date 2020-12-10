@@ -13,9 +13,10 @@ $expediente = $_POST['expediente'];
 $letra = $_POST['letra'];
 $anio = $_POST['anio'];
 $fecha = $_POST['fecha'];
-$renovo = $_POST['renovo'];
-$rec = $_POST['rec'];
+//$renovo = $_POST['renovo'];
+//$rec = $_POST['rec'];
 $cat = $_POST['cat'];
+
 
 $target_path = "images/".basename($_FILES["foto"]['name']);
 
