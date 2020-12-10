@@ -1,5 +1,6 @@
 <?php
 require "conexion.php";
+require './php-image-resize-master/lib/ImageResize.php';
 
 $titular = $_POST['titular'];
 $nacionalidad = $_POST['nacionalidad'];
@@ -13,14 +14,17 @@ $expediente = $_POST['expediente'];
 $letra = $_POST['letra'];
 $anio = $_POST['anio'];
 $fecha = $_POST['fecha'];
-//$renovo = $_POST['renovo'];
-//$rec = $_POST['rec'];
 $cat = $_POST['cat'];
 
+$target_path = "images/" . basename($_FILES["foto"]['name']);
 
-$target_path = "images/".basename($_FILES["foto"]['name']);
+
+$image = new \Gumlet\ImageResize($target_path);
+$image->resizeToHeight(500);
+$image->save('image2.jpg');
 
 if (move_uploaded_file($_FILES["foto"]['tmp_name'], $target_path)) {
+
 
     $sql = "INSERT INTO `filiacion`(`titular`, `nacionalidad`, `fechadenacimiento`, `domicilio`, `licencia`, `gruposanguinio`, `rh`, `disp`,`expediente`,`letra`,`anio`,`fecha`,`foto`,`cat`) 
         VALUES 
