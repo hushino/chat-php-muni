@@ -10,7 +10,7 @@ require "header.php";
     <h1>Formulario</h1>
     <?php while ($re = $res->fetch(PDO::FETCH_ASSOC)) : ?>
         <form action="update.php" method="post" enctype='multipart/form-data'>
-            <input style="visibility: hidden2;" value="<?php echo $re["id"] ?>" type="id" class="form-control" name="id" id="id" aria-describedby="id">
+            <input style="visibility: hidden;" value="<?php echo $re["id"] ?>" type="id" class="form-control" name="id" id="id" aria-describedby="id">
             <div class="form-row">
                 <div class="col-md-4 mb-4">
                     <label for="titular">Titular</label>
@@ -28,6 +28,11 @@ require "header.php";
                 </div>
             </div>
             <div class="form-row">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="max-height: 180px;max-width: 200px;">
+                        <img src="<?php echo $re["foto"] ?>" class="card-img-top" alt="..." style="max-height: inherit;">
+                    </div>
+                </div>
                 <div class="col-md-3 mb-3">
                     <label for="domicilio">Foto</label>
                     <input value="<?php echo $re["foto"] ?>" type="file" class="form-control" name="foto" id="foto" aria-describedby="foto">
@@ -87,17 +92,7 @@ require "header.php";
                 </div>
 
             </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-4">
-                    <label for="renovo">Renovo año</label>
-                    <input value="<?php echo $re["renovo"] ?>" type="date" class="form-control" name="renovo" id="renovo" aria-describedby="renovo">
-                </div>
 
-                <div class="col-md-4 mb-4">
-                    <label for="rec">Rec N°</label>
-                    <input value="<?php echo $re["rec"] ?>" type="number" class="form-control" name="rec" id="rec" aria-describedby="rec">
-                </div>
-            </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     <?php endwhile; ?>

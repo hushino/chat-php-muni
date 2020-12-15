@@ -24,6 +24,7 @@ $res2->execute();
                             <h5 class="card-title"><?php echo $re['titular']; ?></h5>
                             <a href="imprimir.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Imprimir</a>
                             <a href="agregarDatos.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Agregar datos</a>
+                            <a style="margin-top: 10px;" href="actualizarDatos.php?id=<?php echo $re['id']; ?>" target="_blank" class="btn btn-primary">Actualizar datos</a>
                             <table class="table" style="margin-top: 10px;">
                                 <thead>
                                     <tr>
