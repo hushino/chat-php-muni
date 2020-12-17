@@ -46,7 +46,7 @@ include "db.php";
 				$mensaje = $_POST['mensaje'];
 
 
-				$consulta = "INSERT INTO chat (nombre, mensaje) VALUES ('$nombre', '$mensaje')";
+				$consulta = "INSERT INTO `chat` (nombre, mensaje) VALUES ('$nombre', '$mensaje')";
 
 				$ejecutar = $conexion->query($consulta);
 
