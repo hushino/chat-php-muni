@@ -148,7 +148,7 @@ if (!isset($_SESSION['usuario'])) {
                                         <td>
                                             <a href="#edit_<?php echo $row['id']; ?>" class="btn btn-success btn-sm" data-toggle="modal"><span class="fa fa-edit"></span> Editar</a>
                                             <a href="#delete_<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" data-toggle="modal"><span class="fa fa-trash"></span> Eliminar</a>
-                                            <a href="chat.php?id=<?php echo $row['id']; ?>" class="btn btn-info btn-sm"><span class="fa fa-user"></span> Chat</a>
+                                            <a href="http://localhost/chat-php-muni/chatticketsmuni/chat_ajax/?id=<?php echo $row['id']; ?>" class="btn btn-info btn-sm"><span class="fa fa-user"></span> Chat</a>
                                         </td>
                                         <?php include('edit_delete_modal.php'); ?>
                                     </tr>
@@ -216,7 +216,7 @@ if (!isset($_SESSION['usuario'])) {
     function viewData() {
         $.ajax({
             type: "GET",
-            url: "http://localhost/chatticketsmuni/crud_pdo/ajax_index.php",
+            url: "http://localhost/chat-php-muni/chatticketsmuni/crud_pdo/ajax_index.php",
             success: function(response) {
 
 

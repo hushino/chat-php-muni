@@ -1,5 +1,6 @@
 <?php
 include "db.php";
+$id = $_GET["id"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,7 @@ include "db.php";
 				}
 			}
 
-			req.open('GET', 'chat.php', true);
+			req.open('GET', 'chat.php?id=<?php echo $id; ?>', true);
 			req.send();
 		}
 
@@ -37,7 +38,8 @@ include "db.php";
 			<div id="chat"></div>
 		</div>
 
-		<form method="POST" action="index.php">
+		<form method="POST" action="index.php?id=<?php echo $id; ?>">
+			<input type="number" name="idticket" placeholder="idticket" value="<?php echo $id; ?>" style="visibility: hidden;">
 			<input type="text" name="nombre" placeholder="Ingresa tu nombre">
 			<textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
 			<input type="submit" name="enviar" value="Enviar">
@@ -48,9 +50,10 @@ include "db.php";
 
 			$nombre = $_POST['nombre'];
 			$mensaje = $_POST['mensaje'];
+			$idticket = $_POST['idticket'];
 
 
-			$consulta = "INSERT INTO `chat` (nombre, mensaje) VALUES ('$nombre', '$mensaje')";
+			$consulta = "INSERT INTO `chat` (nombre, mensaje, idticket) VALUES ('$nombre', '$mensaje','$idticket')";
 
 			$ejecutar = $conexion->query($consulta);
 

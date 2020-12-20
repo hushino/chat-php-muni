@@ -1,7 +1,8 @@
 <?php
 include "db.php";
+$idticket = $_GET["id"];
 ///consultamos a la base
-$consulta = "SELECT * FROM chat ORDER BY id DESC";
+$consulta = "SELECT * FROM chat WHERE idticket=$idticket ORDER BY id DESC";
 $ejecutar = $conexion->prepare($consulta);
 $ejecutar->execute();
 while ($fila = $ejecutar->fetch(PDO::FETCH_ASSOC)) :
