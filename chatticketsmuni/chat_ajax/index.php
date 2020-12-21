@@ -6,7 +6,7 @@ $id = $_GET["id"];
 <html>
 
 <head>
-	<title>CHAT CON PHP, MYSQL Y AJAX</title>
+	<title>CHAT</title>
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 	<link href="https://fonts.googleapis.com/css?family=Mukta+Vaani" rel="stylesheet">
 
