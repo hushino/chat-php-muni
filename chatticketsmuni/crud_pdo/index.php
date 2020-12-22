@@ -16,7 +16,7 @@ if (!isset($_SESSION['usuario'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>PHP CRUD usando PDO y Bootstrap/Modal</title>
+    <title>Tickets y Chats</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/custom.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/font-awesome.css">
@@ -25,39 +25,21 @@ if (!isset($_SESSION['usuario'])) {
 <body onload="viewData()">
     <div class="container">
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-            <a class="navbar-brand" href="code.html" target="_blank">AnthonCode</a>
+            <a class="navbar-brand" href="code.html" target="_blank">Tickets y Chats</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.youtube.com/channel/UCoBEy_rD5FsKHFHtTPTimjQ/videos?spfreload=10" target="_blank">Más Proyectos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download" aria-expanded="false">Redes Sociales <span class="caret"></span></a>
-                        <div class="dropdown-menu" aria-labelledby="download">
-                            <a class="dropdown-item" href="https://www.facebook.com/AnthonCode" target="_blank">facebook</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://www.youtube.com/c/AnthonCode" target="_blank">youtube</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://AnthonCode.blogspot.com" target="_blank">Blog</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://facebook.com/anthoncode" target="_blank"><i class="fa fa-facebook-official"></i> Like</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="code.html" target="_blank"><i class="fa fa-code"></i>
-                            Sistemas en PHP</a>
-                </ul>
-                <a href="login/cerrarsession.php"><input type="button" value="cerrar session"></a>
+                <a href="login/cerrarsession.php"><input class="btn btn-secondary" type="button" value="cerrar session"></a>
             </div>
         </nav>
-        <h1 class="page-header text-center">PHP CRUD usando PDO</h1>
+        <h1 class="page-header text-center">Tickets y Chats</h1>
         <div class="row">
             <div class="col-sm-12">
+                <div class="alert alert-warning" role="alert">
+                    Esto es lo que saldra al crear una nueva difusión
+                </div>
                 <a href="#addnew" class="btn btn-primary" data-toggle="modal"><span class="fa fa-plus"></span> Nuevo</a>
                 <a href="#addnewdifusion" class="btn btn-primary" data-toggle="modal"><span class="fa fa-plus"></span>
                     Nueva
