@@ -2,7 +2,7 @@
   require "header.php";
   ?>
   <div class="container">
-    <h1>Formulario</h1>
+    <h1>Rendicion de Caja Chinca N°1</h1>
     <form action="insert.php" method="post" enctype='multipart/form-data'>
       <div class="form-row">
         <div class="col-md-4 mb-4">
