@@ -23,8 +23,10 @@ $res2->execute();
 
 <body>
     <div class="container">
+    <img src="./public/munilogo.jpg" alt=""
+    style="display: block;margin: auto;"
+    >
         <?php while ($re = $res->fetch(PDO::FETCH_ASSOC)) : ?>
-            <h1 style="text-align: center;">Municipalidad de clorinda - Filiación del conductor</h1>
             <h3 style="text-align: center;">Direccion de Tránsito</h3>
             <!-- <div class="card mb-3" style="max-width: 540px;margin-top: 30px;">
                 <div class="row no-gutters">
